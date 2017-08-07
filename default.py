@@ -39,7 +39,7 @@ DIALOG         = xbmcgui.Dialog()
 def RunNow():
 	clean.clearCache()
 	clean.clearPackages('startup')
-	INDEX();
+	xbmc.executebuiltin("Action(Back)")
 
 def openPrefs():
 	ADDON.openSettings()
@@ -47,7 +47,7 @@ def openPrefs():
 
 def INDEX():
 	addDir('Run Maintenance Now',BASE,1,ICON,FANART,'')
-	addDir('Open Settings',BASE,2,ICON,FANART,'')
+	addDir('Configure Startup Maintenance',BASE,2,ICON,FANART,'')
 	addDir('Close Kodi Now',BASE,3,ICON,FANART,'')
 def get_params():
         param=[]
